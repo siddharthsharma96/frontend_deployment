@@ -3,7 +3,7 @@ import "./../Style/restaurant.css";
 const Restaurant = () => {
   const { restaurantData } = useOutletContext();
   const { id } = useParams();
-  const restaurant = restaurantData.find((el) => el._id == id);
+  const restaurant = restaurantData.find((el) => el._id === id);
   console.log(restaurant);
 
   return (

@@ -11,7 +11,9 @@ function App() {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const resp = await fetch("http://localhost:9000/api/v1/restaurants");
+        const resp = await fetch(
+          "https://backend-deployment-tjv9.onrender.com/api/v1/restaurants",
+        );
         const data = await resp.json();
         setRestaurantData(data.data);
       } catch (err) {
